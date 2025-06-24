@@ -1,0 +1,27 @@
+{
+  //https://code.visualstudio.com/docs/reference/variables-reference
+  "version": "0.2.0",
+  "inputs": [
+    {
+      "id": "projectName",
+      "type": "pickString",
+      "description": "Select a React project",
+      "options": ["useRef"]
+    },
+    {
+      "id": "port",
+      "type": "promptString",
+      "description": "Enter the dev server port (default: 5173)",
+      "default": "5173"
+    }
+  ],
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost:${input:port}",
+      "webRoot": "${workspaceFolder}/${input:projectName}/src",
+    }
+  ]
+}

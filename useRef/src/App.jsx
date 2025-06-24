@@ -10,7 +10,8 @@ export default function Stopwatch() {
     setNow(Date.now());
 
     clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
+
+    intervalRef.current = setInterval(() => {   //setInterval return timerID
       setNow(Date.now());
     }, 10);
   }
