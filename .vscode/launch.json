@@ -6,7 +6,15 @@
       "id": "projectName",
       "type": "pickString",
       "description": "Select a React project",
-      "options": ["useRef","forms"]
+      "options": [
+        "01-react-template",
+        "02-helloworld",
+        "03-inline-styling",
+        "04-useState-hook",
+        "05-useRef-hook",
+        "06-forms",
+        "07-useEffect-hook"
+      ]
     },
     {
       "id": "port",
@@ -21,7 +29,7 @@
       "request": "launch",
       "name": "Launch Chrome against localhost",
       "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}/${input:projectName}/src",
+      "webRoot": "${workspaceFolder}/${input:projectName}/src"
     }
   ]
 }
