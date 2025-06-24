@@ -6,7 +6,7 @@
       "id": "projectName",
       "type": "pickString",
       "description": "Select a React project",
-      "options": ["useRef"]
+      "options": ["useRef","forms"]
     },
     {
       "id": "port",
@@ -20,7 +20,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Launch Chrome against localhost",
-      "url": "http://localhost:${input:port}",
+      "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}/${input:projectName}/src",
     }
   ]
