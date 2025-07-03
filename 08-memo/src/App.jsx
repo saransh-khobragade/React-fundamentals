@@ -1,28 +1,27 @@
-import React from "react";
+import React from 'react';
 
-const Child1 = () => {
-  console.log("👶 Child1 Rendered");
-  return <button>child1</button>;
+// 🚸 Child component
+const Child1 = ({ name }) => {
+  console.log("👶 Child Rendered");
+  return <h2>Child1: {name}</h2>;
 };
-
-// Child is memoized, it will only re-render if props change
-const Child2 = React.memo(({onClick}) => {
-  console.log("👶 Child2 Rendered");
-  return <button onClick={onClick}>child2</button>;
+// 🚸 Child component
+const Child2 = React.memo(({ name }) => {
+  console.log("👶 Memo Child Rendered");
+  return <h2>Child2: {name}</h2>;
 });
 
+
+// 🏠 Parent component
 export default function App() {
-
-  const handleClick = () => {
-    console.log("Button clicked");
-  };
-
-  console.log("🏠 Parent Rendered");
+  const [count, setCount] = React.useState(0);
 
   return (
     <div>
-      <Child1 />
-      <Child2 onClick={handleClick} />
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+      <Child1 name="Saransh" />
+      <Child2 name="Saransh" />
     </div>
   );
 }
