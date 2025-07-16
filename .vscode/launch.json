@@ -13,7 +13,10 @@
         "04-useState-hook",
         "05-useRef-hook",
         "06-forms",
-        "07-useEffect-hook"
+        "07-useEffect-hook",
+        "08-memo",
+        "09-useCallback-hook",
+        "10-custom-hook"
       ]
     },
     {
